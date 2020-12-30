@@ -40,4 +40,4 @@ fi
 # Launch the server.
 echo "[+] Running the server..."
 cd /data || exit 1
-bin/openttd -D
+bin/openttd -D -c /data/openttd.cfg
