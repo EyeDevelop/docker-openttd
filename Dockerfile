@@ -8,4 +8,5 @@ ENV OPENTTD_VERSION 1.10.3
 ENV OPENGFX_VERSION 0.6.0
 
 COPY entrypoint.sh /entrypoint.sh
+COPY openttd.cfg /default_config.cfg
 CMD [ "/entrypoint.sh" ]

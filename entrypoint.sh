@@ -33,6 +33,7 @@ if [[ ! -f /data/.openttd_setup ]]; then
     unzip -d /data/bin/baseset/ /tmp/opengfx.zip
 
     # We are done installing.
+    cp /default_config.cfg /data/openttd.cfg
     touch /data/.openttd_setup
     chown abc:abc -R /data
 fi
@@ -40,4 +41,4 @@ fi
 # Launch the server.
 echo "[+] Running the server..."
 cd /data || exit 1
-bin/openttd -D -c /data/openttd.cfg
+su-exec abc bin/openttd -D -c /data/openttd.cfg
